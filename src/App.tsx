@@ -2,6 +2,7 @@ import HomePage from './views/HomePage'
 import MainLayout from './layouts/MainLayout'
 import JobsPage from './views/JobsPage'
 import NotFoundPage from './views/NotFoundPage'
+import JobPage from './views/JobPage'
 import {Route, createBrowserRouter, createRoutesFromElements, RouterProvider} from 'react-router-dom'
 
 const router = createBrowserRouter(
@@ -9,6 +10,7 @@ const router = createBrowserRouter(
   <Route path ='/' element ={<MainLayout />}>
     <Route index element = {<HomePage/>}/>
     <Route path='/jobs' element = {<JobsPage/>}/>
+    <Route path='/jobs/:id' element = {<JobPage/>}/>
     <Route path='*' element = {<NotFoundPage/>}/>
   </Route>
 )
